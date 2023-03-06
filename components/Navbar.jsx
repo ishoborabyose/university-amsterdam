@@ -61,9 +61,12 @@ export const Navbar = () => {
             </span>{" "}
             <CiHeart className="w-[42px] h-[42px] group-hover:bg-transparent group-hover:shadow-hov group-hover:duration-300 " />
           </button>
-          <button className="py-[8.4px]  px-[4px] w-[42px] h-[42px] text-center items-center leading-[16px] hover:duration-300 hover:shadow-hov justify-center gap-[8px] flex font-bold text-[#1f1d21] rounded-[2px] bg-white border border-[#1f1d21]">
+          <Link
+            href="/nl"
+            className="py-[8.4px]  px-[4px] w-[42px] h-[42px] text-center items-center leading-[16px] hover:duration-300 hover:shadow-hov justify-center gap-[8px] flex font-bold text-[#1f1d21] rounded-[2px] bg-white border border-[#1f1d21]"
+          >
             NL
-          </button>
+          </Link>
         </div>
         <div className="hidden  sm:flex gap-3">
           <button className="flex items-center gap-[5px] px-[0.3rem] w-fit">

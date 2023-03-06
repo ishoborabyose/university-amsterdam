@@ -1,5 +1,7 @@
 import React from "react";
 
-export const nl = () => {
+const nl = () => {
   return <div>nl</div>;
 };
+
+export default nl;
