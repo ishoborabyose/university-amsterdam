@@ -5,6 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { AiFillRightSquare } from "react-icons/ai";
 import { VscClose } from "react-icons/vsc";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -97,10 +98,14 @@ export const Navbar = () => {
                 {["education", "research", "news", "about", "library"].map(
                   (item, index) => {
                     return (
-                      <span className="border-t-2 flex items-center gap-1 border-t-white text-[16px] leading-[25px] hover:text-[#bc0031] hover:border-b-2 hover:border-b-[#bc0031]">
+                      <Link
+                        href={item}
+                        key={index}
+                        className="border-t-2 flex items-center gap-1 border-t-white text-[16px] leading-[25px] hover:text-[#bc0031] hover:border-b-2 hover:border-b-[#bc0031]"
+                      >
                         <AiFillRightSquare className="bg-black text-white" />{" "}
                         {item}
-                      </span>
+                      </Link>
                     );
                   }
                 )}

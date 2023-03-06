@@ -19,7 +19,8 @@ export const Header = () => {
             return (
               <div key={index} className="group ">
                 <Link
-                  href=""
+                  href={items}
+                  key={index}
                   className="text-[#1f1d21] group-hover:text-[#bc0031] group-hover:border-b-2 group-hover:border-b-[#bc0031]  text-[20px] leading-[32px] flex font-normal mr-[48px] pb-[8.4px] border-transparent border-b-2 pt-[12px]"
                 >
                   {items}
@@ -40,9 +41,10 @@ export const Header = () => {
                       "exchange",
                     ].map((items, index) => {
                       return (
-                        <div key={index} className="">
+                        <div className="">
                           <Link
-                            href=""
+                            href={items}
+                            key={index}
                             className="hover:text-[#bc0031] hover:border-b-2 hover:border-b-[#bc0031]"
                           >
                             {items}
@@ -61,9 +63,10 @@ export const Header = () => {
                   <div className="grid grid-cols-1 font-normal  gap-2 ">
                     {["Research at the UvA", "PhD"].map((items, index) => {
                       return (
-                        <div key={index} className="">
+                        <div className="">
                           <Link
-                            href=""
+                            href={items}
+                            key={index}
                             className=" text-[16px] leading-[25px] hover:text-[#bc0031] hover:border-b-2 hover:border-b-[#bc0031]"
                           >
                             {items}
@@ -90,9 +93,10 @@ export const Header = () => {
                       "Ukraine information and support",
                     ].map((items, index) => {
                       return (
-                        <div key={index} className="">
+                        <div className="">
                           <Link
-                            href=""
+                            href={items}
+                            key={index}
                             className="text-[16px] leading-[25px] hover:text-[#bc0031] hover:border-b-2 hover:border-b-[#bc0031] "
                           >
                             {items}
