@@ -26,7 +26,7 @@ const utopia = localFont({
 export default function App({ Component, pageProps }) {
   return (
     <div className={`${utopia.variable} font-sans`}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </div>
   );
 }
