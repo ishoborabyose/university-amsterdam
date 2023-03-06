@@ -47,7 +47,7 @@ export const Navbar = () => {
         )}
         <img className="object-cover sm:block hidden" src="/images/small.PNG" />
         <div className="flex items-center gap-[12px] sm:hidden ">
-          <div className=" relative  lg:hidden flex mr-[1px] ">
+          <div className=" relative   flex mr-[1px] ">
             <div className=" absolute top-[30%] border-l pl-2 left-[360px]">
               <CiSearch className="w-5 h-5  cursor-pointer" />
             </div>

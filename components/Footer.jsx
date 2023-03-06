@@ -39,7 +39,7 @@ export const Footer = () => {
           <AiFillUpSquare className="text-[#C7C6C7]  h-[42px] w-[42px] bg-[#1f1d21]" />
         </div>
 
-        <ul className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 mt-12 mb-6  text-white grid-cols-4">
+        <ul className="grid sm:grid-cols-1  gap-4 mt-12 mb-6  text-white grid-cols-4">
           {[
             {
               title: "Education & research",
