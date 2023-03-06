@@ -2,11 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
-import { SlHeart } from "react-icons/sl";
 import { CiHeart } from "react-icons/ci";
 import { AiFillRightSquare } from "react-icons/ai";
 import { VscClose } from "react-icons/vsc";
-import { VscHeart } from "react-icons/vsc";
 
 export const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -29,7 +27,7 @@ export const Navbar = () => {
   return (
     <div className="shadow-shadow1 bg-white fixed z-10 w-full">
       <div
-        className={`flex justify-between duration-500  items-center sm:py-1  max-w-[89rem] px-3 mx-auto ${
+        className={`flex justify-between duration-500 ease-in-out  items-center sm:py-1  max-w-[89rem] px-3 mx-auto ${
           scrolled ? "py-1" : "py-[21px]"
         }`}
       >

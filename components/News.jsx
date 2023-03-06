@@ -1,12 +1,10 @@
 import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import Image from "next/image";
 
 export const News = () => {
   return (
     <div className="bg-[#E6E6E6] ">
-      {/* <div className=" pl-[60px]  pb-[60px] sm:pb-[100px] mt-[64px]"> */}
       <div className=" pb-[60px] sm:pb-[100px] mt-[64px] pl-3 max-w-[89rem] mx-auto">
         <div className="flex justify-between items-center">
           <h1
@@ -17,7 +15,6 @@ export const News = () => {
           <MdKeyboardArrowRight className="text-[#1f1d21] w-8 h-8 " />
         </div>
 
-        {/* <div className="flex justify-center gap-[24px] h-[470px] scrollHidden  overflow-x-scroll"> */}
         <div className="flex justify-center- flex-nowrap h-[470px] sm:scrollHidden sm:overflow-x-scroll scrollHidden  overflow-x-scroll gap-[24px]">
           {[
             {

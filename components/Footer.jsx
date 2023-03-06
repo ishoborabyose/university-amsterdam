@@ -1,8 +1,7 @@
 import React from "react";
-import { BsArrowRight, BsChevronDown } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { AiFillUpSquare } from "react-icons/ai";
-import { BsChevronRight } from "react-icons/bs";
 
 import {
   FaFacebookF,
@@ -12,10 +11,7 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
-import {
-  MdKeyboardArrowDown,
-  MdOutlineKeyboardArrowRight,
-} from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
 
 export const Footer = () => {

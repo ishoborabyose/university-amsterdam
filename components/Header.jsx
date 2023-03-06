@@ -3,17 +3,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 90) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-  }, []);
   return (
     <div
       className={` bg-[#F5F5F5]  pt-[85px] shadow-shadow2 sm:hidden duration-500`}
