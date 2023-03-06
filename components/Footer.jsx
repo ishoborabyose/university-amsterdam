@@ -1,6 +1,6 @@
 import React from "react";
 import { BsArrowRight, BsChevronDown } from "react-icons/bs";
-
+import { useEffect, useState } from "react";
 import { AiFillUpSquare } from "react-icons/ai";
 import { BsChevronRight } from "react-icons/bs";
 
@@ -12,8 +12,25 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+import {
+  MdKeyboardArrowDown,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import Link from "next/link";
 
 export const Footer = () => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleWidth);
+    return () => {
+      window.removeEventListener("resize", handleWidth);
+    };
+  }, []);
   return (
     <div className="bg-[#1F1D20]">
       <div className=" max-w-[89rem] px-3 mx-auto mt-[64px] pt-[36px]">
@@ -22,119 +39,81 @@ export const Footer = () => {
           <AiFillUpSquare className="text-[#C7C6C7]  h-[42px] w-[42px] bg-[#1f1d21]" />
         </div>
 
-        <div className="grid sm:grid-cols-1 grid-cols-4 sm:mt-[36px] mt-[48px] ">
-          <div className="flex flex-col">
-            {[
-              "education & Reasearch",
-              "bachelors",
-              "minors",
-              "masters",
-              "professional",
-              "exchange",
-              "summer",
-              "phd",
-              "research",
-            ].map((item, index) => {
-              return (
-                <span
-                  className={`${
-                    index === 0
-                      ? "text-[16px] leading-[16px] text-white font-semibold mb-[20px] flex sm:justify-between sm:pb-3 sm:pt-6  sm:border-t sm:border-t-white items-center gap-0.5 "
-                      : "text-[14px] leading-[22px] text-white cursor-pointer font-normal mb-[8px] flex items-center gap-0.5 sm:hidden "
-                  } `}
-                >
-                  <BsChevronRight
-                    className={`${index === 0 ? "hidden" : ""} sm:hidden`}
-                  />{" "}
-                  {item} <BsChevronDown className="sm:block hidden" />
-                </span>
-              );
-            })}
-          </div>
-          <div>
-            {[
-              "go to",
-              "webmail",
-              "webmail",
-              "library",
-              "canvas",
-              "sis",
-              "timetable",
-              "course",
-              "vacancies",
-              "uvashopnl",
-            ].map((item, index) => {
-              return (
-                <span
-                  className={`${
-                    index === 0
-                      ? "text-[16px] leading-[16px] text-white font-semibold mb-[20px] flex sm:justify-between sm:py-3 sm:border-t sm:border-t-white items-center gap-0.5 "
-                      : "text-[14px] leading-[22px] cursor-pointer text-white font-normal mb-[8px] flex items-center gap-0.5 sm:hidden "
-                  } `}
-                >
-                  <BsChevronRight
-                    className={`${index === 0 ? "hidden" : ""} sm:hidden`}
-                  />{" "}
-                  {item} <BsChevronDown className="sm:block hidden" />
-                </span>
-              );
-            })}
-          </div>
-
-          <div>
-            {[
-              "information for",
-              "prospective",
-              "current",
-              "staff",
-              "journalists",
-              "alumni",
-              "donors",
-              "employers",
-              "external",
-            ].map((item, index) => {
-              return (
-                <span
-                  className={`${
-                    index === 0
-                      ? "text-[16px] leading-[16px] text-white font-semibold mb-[20px] flex sm:justify-between sm:py-3 sm:border-t sm:border-t-white items-center gap-0.5 "
-                      : "text-[14px] leading-[22px] cursor-pointer text-white font-normal mb-[8px] flex items-center gap-0.5 sm:hidden "
-                  } `}
-                >
-                  <BsChevronRight
-                    className={`${index === 0 ? "hidden" : ""} sm:hidden`}
-                  />{" "}
-                  {item} <BsChevronDown className="sm:block hidden" />
-                </span>
-              );
-            })}
-          </div>
-
-          <div>
-            {[
-              "contact",
-              "contact information",
-              "locations",
-              "contact student services",
-              "the uva and social media",
-            ].map((item, index) => {
-              return (
-                <span
-                  className={`${
-                    index === 0
-                      ? "text-[16px] leading-[16px] text-white font-semibold mb-[20px] flex sm:justify-between sm:py-3 sm:border-t sm:border-t-white items-center gap-0.5 "
-                      : "text-[14px] leading-[22px] cursor-pointer text-white font-normal mb-[8px] flex items-center gap-0.5 sm:hidden "
-                  } `}
-                >
-                  <BsChevronRight
-                    className={`${index === 0 ? "hidden" : ""} sm:hidden`}
-                  />{" "}
-                  {item} <BsChevronDown className="sm:block hidden" />
-                </span>
-              );
-            })}
-          </div>
-        </div>
+        <ul className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 mt-12 mb-6  text-white grid-cols-4">
+          {[
+            {
+              title: "Education & research",
+              list: [
+                "Bachelor's programmes",
+                "Minors",
+                "Master's programmes",
+                "Professional development",
+                "Exchange",
+                "Summer School",
+                "PhD at UvA",
+                "Research at UvA",
+              ],
+            },
+            {
+              title: "Got to",
+              list: [
+                "Bachelor's programmes",
+                "Minors",
+                "Master's programmes",
+                "Professional development",
+                "Exchange",
+                "Summer School",
+                "PhD at UvA",
+                "Research at UvA",
+              ],
+            },
+            {
+              title: "Infromation for",
+              list: [
+                "Bachelor's programmes",
+                "Minors",
+                "Master's programmes",
+                "Professional development",
+                "Exchange",
+                "Summer School",
+                "PhD at UvA",
+                "Research at UvA",
+              ],
+            },
+            {
+              title: "Contact",
+              list: [
+                "Contact information",
+                "Locations",
+                "Contact Student Services",
+                "The UvA and social mediaA",
+              ],
+            },
+          ].map((e, i) => (
+            <details
+              key={i}
+              className="space-y-4"
+              open={windowWidth > 640 && true}
+            >
+              <summary className="flex items-center justify-between py-6 sm:border-t cursor-pointer md:py-0 sm:border-t-white ">
+                <h5 className="text-base leading-[1.6] font-semibold ">
+                  {e?.title}
+                </h5>
+                <BsChevronDown className="text-2xl text-white duration-300 ease-in-out hidden sm:block group-open:rotate-90" />
+              </summary>
+              <ul className="mb-6">
+                {e.list.map((e, i) => (
+                  <li key={i} className="pl-2 py-[.1875rem]">
+                    <Link href={e} className="flex items-center gap-1">
+                      <MdOutlineKeyboardArrowRight className="text-base " />
+                      <p className="text-[87.5%] leading-[27px] ">{e}</p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </ul>
       </div>
 
       <div className=" sm:border-none border-t border-t-white mt-[36px]">

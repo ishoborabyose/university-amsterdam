@@ -2,7 +2,7 @@ import React from "react";
 
 export const Current = () => {
   return (
-    <div className="bg-white max-w-[89rem] px-3 mx-auto sm:mt-[255px] mt-[64px]">
+    <div className="bg-white max-w-[89rem] px-3 mx-auto sm:mt-[255px] lg:mt-[255px] mt-[64px]">
       <div className="flex justify-between">
         <h1
           className={`text-[#1f1d21]  text-[30px] leading-[48px] font-semibold mb-[24px]`}

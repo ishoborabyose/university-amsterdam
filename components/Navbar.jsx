@@ -6,6 +6,7 @@ import { SlHeart } from "react-icons/sl";
 import { CiHeart } from "react-icons/ci";
 import { AiFillRightSquare } from "react-icons/ai";
 import { VscClose } from "react-icons/vsc";
+import { VscHeart } from "react-icons/vsc";
 
 export const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -46,7 +47,7 @@ export const Navbar = () => {
         )}
         <img className="object-cover sm:block hidden" src="/images/small.PNG" />
         <div className="flex items-center gap-[12px] sm:hidden ">
-          <div className=" relative  flex mr-[1px] ">
+          <div className=" relative  lg:hidden flex mr-[1px] ">
             <div className=" absolute top-[30%] border-l pl-2 left-[360px]">
               <CiSearch className="w-5 h-5  cursor-pointer" />
             </div>
@@ -59,13 +60,13 @@ export const Navbar = () => {
             <span className="py-[0.3rem] group-hover:underline ">
               Compare programmes
             </span>{" "}
-            <CiHeart className="w-[42px] h-[42px] group-hover:text-hove group-hover:duration-300 " />
+            <CiHeart className="w-[42px] h-[42px] group-hover:bg-transparent group-hover:shadow-hov group-hover:duration-300 " />
           </button>
           <button className="py-[8.4px]  px-[4px] w-[42px] h-[42px] text-center items-center leading-[16px] hover:duration-300 hover:shadow-hov justify-center gap-[8px] flex font-bold text-[#1f1d21] rounded-[2px] bg-white border border-[#1f1d21]">
             NL
           </button>
         </div>
-        <div className="hidden sm:flex gap-3">
+        <div className="hidden  sm:flex gap-3">
           <button className="flex items-center gap-[5px] px-[0.3rem] w-fit">
             <CiHeart className="w-[42px] h-[42px] " />
           </button>

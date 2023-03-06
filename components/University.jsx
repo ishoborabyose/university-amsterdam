@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 export const University = () => {
   return (
     <div className="max-w-6xl px-3 mx-auto mt-[72px] sm:pt-7 sm:mt-0 pb-[86px] relative">
-      <div className="grid grid-cols-2 sm:grid-cols-1">
+      <div className="grid grid-cols-2 lg:grid-cols-1 sm:grid-cols-1">
         <div className="pt-[72px]">
           <h1 className="text-[#1f1d21] leading-[59px] text-[42px] font-semibold">
             University of Amsterdam
@@ -22,7 +22,7 @@ export const University = () => {
           <div className="bg-[#F7F7F7] w-[547] h-[500px] px-72  -right-[124px] -bottom-[72px]  -z-10 absolute  sm:hidden "></div>
         </div>
       </div>
-      <div className=" grid sm:grid-cols-1 grid-cols-3 gap-[12px] absolute left-1 sm:left-7 sm:top-[555px]  top-[334px]">
+      <div className=" grid sm:grid-cols-1 grid-cols-3 gap-[12px] lg:left-40 lg:top-[500px] lg:grid-cols-1 absolute left-1 sm:left-7 sm:top-[555px]  top-[334px]">
         {[
           {
             title: "Bachelor's",
