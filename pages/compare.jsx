@@ -1,5 +1,7 @@
 import React from "react";
 
-export const compare = () => {
+const compare = () => {
   return <div>compare</div>;
 };
+
+export default compare;

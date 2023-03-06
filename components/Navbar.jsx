@@ -55,12 +55,15 @@ export const Navbar = () => {
               className="w-[400px] h-[42px] rounded-[4px] text-[#1f1d20] leading-[40px] pr-[54px]  pl-[12px]  border"
             />
           </div>
-          <button className="flex group  items-center  px-[0.3rem] w-fit">
+          <Link
+            href="/compare"
+            className="flex group  items-center  px-[0.3rem] w-fit"
+          >
             <span className="py-[0.3rem] group-hover:underline ">
               Compare programmes
             </span>{" "}
             <CiHeart className="w-[42px] h-[42px] group-hover:bg-transparent group-hover:shadow-hov group-hover:duration-300 " />
-          </button>
+          </Link>
           <Link
             href="/nl"
             className="py-[8.4px]  px-[4px] w-[42px] h-[42px] text-center items-center leading-[16px] hover:duration-300 hover:shadow-hov justify-center gap-[8px] flex font-bold text-[#1f1d21] rounded-[2px] bg-white border border-[#1f1d21]"
